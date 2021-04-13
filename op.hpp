@@ -4,26 +4,10 @@
 #include "base.hpp"
 
 class Op : public Base {
-private: 
-    double _value;
-public:
-    Op(double value) : _value(value) { }; // not sure, may have to fix
-    virtual double evaluate() { return this->_value; };
-    virtual std::string stringify() { 
-        std::string valuetostring = std::to_string(_value);
-        return valuetostring; };
+    public:
+        Op(double value) : Base() { }
+        virtual double evaluate() { return 0.0; }
+        virtual std::string stringify() { return ""; }
 };
 
 #endif //__OP_HPP__
-
-
-
-
-
-
-
-
-
-
-
-
