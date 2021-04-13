@@ -1,4 +1,5 @@
-fndef __OP_HPP__
+#pragma once
+#ifndef __OP_HPP__
 #define __OP_HPP__
 
 #include "base.hpp"
@@ -21,4 +22,50 @@ public:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
