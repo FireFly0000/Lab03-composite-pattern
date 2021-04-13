@@ -20,7 +20,7 @@ public:
     virtual std::string stringify() {
         std::string valuetostring1 = std::to_string(_lop);
         std::string valuetostring2 = std::to_string(_rop);
-        std::string valuetostring3 = "(" + valuetostring1 + "/" + valuetostring2 + ")";
+        std::string valuetostring3 = "(" + valuetostring1 + "**" + valuetostring2 + ")";
         return valuetostring3;
     };
 };
