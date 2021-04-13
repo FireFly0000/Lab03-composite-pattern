@@ -1,13 +1,14 @@
-fndef __RAND_HPP__
+#pragma once
+#ifndef __RAND_HPP__
 #define __RAND_HPP__
 
 #include "base.hpp"
 
-class Op : public Base {
+class Rand : public Base {
 private: 
     double _value;
 public:
-    Op() { this->_value = rand() % 100; }; // may have to fix
+    Rand() { this->_value = rand() % 100; }; // may have to fix
     virtual double evaluate() { return this->_value; };
     virtual std::string stringify() {
         std::string valuetostring = std::to_string(_value);

@@ -1,18 +1,19 @@
-fndef __DIV_HPP__
+#pragma once
+#ifndef __DIV_HPP__
 #define __DIV_HPP__
 
 #include "base.hpp"
 
-class Op : public Base {
+class Div : public Base {
 private:
     double _value;
     double _lop;
     double _rop;
 public:
-    Op(double lop, double rop) : _value(lop/rop) // not sure, may have to fix
+    Div(Base* lop, Base* rop) : _value(lop->evaluate()/rop->evaluate()) // not sure, may have to fix
     {
-        this->_lop = lop;
-        this->_rop = rop;
+        this->_lop = lop->evaluate();
+        this->_rop = rop->evaluate();
     };
     virtual double evaluate() { return this->_value; };
     virtual std::string stringify() {
@@ -24,4 +25,5 @@ public:
 };
 
 #endif //__DIV_HPP__
+
 

@@ -1,17 +1,18 @@
-fndef __POW_HPP__
+#pragma once
+#ifndef __POW_HPP__
 #define __POW_HPP__
 
 #include "base.hpp"
 #include <cmath> // for pow
 
-class Op : public Base {
+class Pow : public Base {
 private:
     double _value;
     double _lop;
     double _rop;
 public:
     
-    Op(double lop, double rop) : _value(std::pow(lop, rop))
+    Pow(double lop, double rop) : _value(std::pow(lop, rop))
     {
         this->_lop = lop;
         this->_rop = rop;
@@ -26,5 +27,3 @@ public:
 };
 
 #endif //__POW_HPP__
-#pragma once
-

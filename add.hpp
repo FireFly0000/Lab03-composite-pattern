@@ -1,18 +1,19 @@
-fndef __ADD_HPP__
+#pragma once
+#ifndef __ADD_HPP__
 #define __ADD_HPP__
 
 #include "base.hpp"
 
-class Op : public Base {
+class Add : public Base {
 private:
     double _value;
     double _lop;
     double _rop;
 public:
-    Op(double lop, double rop) : _value(lop+rop) // may need to fix
+    Add(Base* lop, Base* rop) : _value(lop->evaluate()+rop->evaluate()) // not sure, may have to fix
     {
-        this->_lop = lop;
-        this->_rop = rop;
+        this->_lop = lop->evaluate();
+        this->_rop = rop->evaluate();
     };
     virtual double evaluate() { return this->_value; };
     virtual std::string stringify() {
@@ -24,5 +25,6 @@ public:
 };
 
 #endif //__ADD_HPP__
-#pragma once
+
+
 
