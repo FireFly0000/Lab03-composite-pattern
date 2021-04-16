@@ -74,6 +74,18 @@ TEST(SubTest, EvalDivPowSub) {
     Base* m = new Add(g, h);
     EXPECT_EQ(m->evaluate(), 10);
 }
+TEST(SubTest, StringDivPowSub) {
+    Base* a = new Op(4);
+    Base* b = new Op(2);
+    Base* c = new Div(a, b);
+    Base* d = new Op(6);
+    Base* e = new Op(3);
+    Base* f = new Sub(d, e);
+    Base* g = new Pow(f,c);
+    Base* h = new Op(1);
+    Base* m = new Sub(g, h);
+    EXPECT_EQ(m->stringify(), "(((6-3)**(4/2))-1)");
+}
 
-#endif //__ADD_TEST_HPP__
+#endif //__SUB_TEST_HPP__
 

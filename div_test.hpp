@@ -76,7 +76,7 @@ TEST(DivTest, StringDivNode) {
     Base* c = new Div(a, b);
     Base* d = new Op(6);
     Base* e = new Div(c, d);
-    EXPECT_EQ(e->stringify(), "(36/6)");
+    EXPECT_EQ(e->stringify(), "((144/4)/6)");
 
 }
 TEST(DivTest, DivByZero) {

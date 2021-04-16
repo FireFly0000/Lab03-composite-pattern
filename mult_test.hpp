@@ -65,7 +65,7 @@ TEST(MultTest, StringMultNode) {
     Base* c = new Mult(a, b);
     Base* d = new Op(6);
     Base* e = new Mult(c, d);
-    EXPECT_EQ(e->stringify(), "(20*6)");
+    EXPECT_EQ(e->stringify(), "((4*5)*6)");
 
 }
 
